@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+    <div>
+        <form id="logoutForm">
+              <input type="submit" name="submit">   
+          </form>  
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+        <script>
+  
+    var firebaseConfig = {
+      apiKey: "AIzaSyAIycm1szg_Wn-Ru_3mvXm_ThI01hDnv4o",
+      authDomain: "sign-in-52f8a.firebaseapp.com",
+      databaseURL: "https://sign-in-52f8a-default-rtdb.firebaseio.com",
+      projectId: "sign-in-52f8a",
+      storageBucket: "sign-in-52f8a.appspot.com",
+      messagingSenderId: "394110198963",
+      appId: "1:394110198963:web:58b84fde120869f8b6bcc6",
+      measurementId: "G-715KZ5CY7K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth=firebase.auth();
+    const db=firebase.firestore();
+    db.settings({timestampInSnapshots:true});
+        </script>
+   
+        <script src="logout.js"></script>
+</body>
+
+</html>

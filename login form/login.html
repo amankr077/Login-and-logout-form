@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div>signupForm</div>
+    <form id="signupForm">
+        <div class="form">
+        <br> <label> username:</label>
+        <input type="text" name="login" placeholder="Enter your username here" id="email"/>
+          </div>
+        <div class="upp2">   
+       <br> <label> password:</label> 
+        <input type="password" name="pass" placeholder="Enter your password here" id="pass"/>
+          </div>
+        
+           <div class="submit">
+          <br> <input type="submit" name="submit" id="button">
+           </div>           
+        </div>  
+      </form>
+      <div>loginForm</div>
+      <form id="loginForm">
+        <div class="form">
+        <br> <label> username:</label>
+        <input type="text" name="login" placeholder="Enter your username here" id="lEmail"/>
+          </div>
+        <div class="upp2">   
+       <br> <label> password:</label> 
+        <input type="password" name="pass" placeholder="Enter your password here" id="lpass"/>
+          </div>
+        
+           <div class="submit">
+          <br> <input type="submit" name="submit">
+           </div>           
+        </div>  
+      </form>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+      <script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAIycm1szg_Wn-Ru_3mvXm_ThI01hDnv4o",
+    authDomain: "sign-in-52f8a.firebaseapp.com",
+    databaseURL: "https://sign-in-52f8a-default-rtdb.firebaseio.com",
+    projectId: "sign-in-52f8a",
+    storageBucket: "sign-in-52f8a.appspot.com",
+    messagingSenderId: "394110198963",
+    appId: "1:394110198963:web:58b84fde120869f8b6bcc6",
+    measurementId: "G-715KZ5CY7K"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth=firebase.auth();
+  const db=firebase.firestore();
+  db.settings({timestampInSnapshots:true});
+      </script>
+ 
+      <script src="login.js"></script>
+</body>
+</html>
